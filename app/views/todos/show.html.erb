@@ -1,0 +1,37 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-6">
+      <h2><%= @todo['title']%></h2>
+    </div>
+  </div>
+  <div class="row item-txt">
+    <div class="col-md-6">
+      <h4>Notes:</h4>
+      <i><%= @todo['description'] %></i>
+
+      <%= link_to edit_todo_path(@todo[:id]), class: "icon-link" do %>
+        <%= fa_icon "edit" %>
+      <% end %>
+
+      <%= link_to @todo, method: :delete, data: {confirm: "Are you sure you want to remove '#{@todo.title}'?"}, class: "icon-link" do %>
+        <%= fa_icon "trash" %>
+      <% end %>
+    </div>
+    <div class="row">
+      <div class="col-md-6">
+        <%= @todo.priority_level %>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6">
+    <br>
+      <%= link_to "Todos", root_path, class: "action-txt" %> | <%= link_to 'New', new_todo_path, class: "action-txt" %>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6">
+      
+    </div>
+  </div>
+</div>
