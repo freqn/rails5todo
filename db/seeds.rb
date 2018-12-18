@@ -1,7 +1,8 @@
-class GenerateData 
+class GenData 
   def initialize
     run
   end
+
   def run 
     Todo.create([
       {title: "status handling", description: "to mark as 'done' instead of destroying", priority_level: randomize },
@@ -16,10 +17,13 @@ class GenerateData
       {title: "ajax", description: "more realtime goodness", priority_level: randomize },
     ])
   end
+
   private
+
   def randomize 
     rand(1..10)
   end
 end
 
-GenerateData.new.run
+GenData.new
+
