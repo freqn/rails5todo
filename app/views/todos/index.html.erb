@@ -22,10 +22,12 @@
       <div class="col-md-2 item-txt">
         <%= link_to todo.title, todo_path(todo.id), class: "icon-link" %> 
       </div>
-      <div class="col-md-2 item-txt">
-        <%= todo.priority_level %> 
+      <div class="col-md-1">
+        <div class="col-md-2 item-txt">
+          <%= todo.priority_level %> 
+        </div>
       </div>
-      <div class="col-md-2">
+      <div class="col-md-1">
         <%= link_to edit_todo_path(todo[:id]), class: "icon-link" do %>
           <%= fa_icon "edit" %>
         <% end %>

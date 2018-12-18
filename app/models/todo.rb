@@ -3,8 +3,9 @@ class Todo < ApplicationRecord
 
   def self.priority_counts
     list = self.pluck(:priority_level)
-    list.each_with_object(Hash.new(0)) do |level,count|
-       count[level] += 1
-    end.select { |k,v| v > 1 }
+    result = list.each_with_object(Hash.new(0)) do |level,count|
+              count[level] += 1
+            end.select { |k,v| v > 1 }
+    result.sort { |a,b| b[1] <=> a[1] }
   end
 end
