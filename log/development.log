@@ -15247,3 +15247,649 @@ Processing by TodosController#index as HTML
 Completed 200 OK in 61ms (Views: 51.5ms | ActiveRecord: 3.7ms)
 
 
+DEPRECATION WARNING: Static attributes will be removed in FactoryBot 5.0. Please use dynamic
+attributes instead by wrapping the attribute value in a block:
+
+name { "test" }
+
+To automatically update from static attributes to dynamic ones,
+install rubocop-rspec and run:
+
+rubocop \
+  --require rubocop-rspec \
+  --only FactoryBot/AttributeDefinedStatically \
+  --auto-correct
+
+ (called from block (2 levels) in <main> at /Users/freqn/projects/sandbox/todo_app/spec/factories/todos.rb:3)
+DEPRECATION WARNING: Static attributes will be removed in FactoryBot 5.0. Please use dynamic
+attributes instead by wrapping the attribute value in a block:
+
+description { "factory-based description" }
+
+To automatically update from static attributes to dynamic ones,
+install rubocop-rspec and run:
+
+rubocop \
+  --require rubocop-rspec \
+  --only FactoryBot/AttributeDefinedStatically \
+  --auto-correct
+
+ (called from block (2 levels) in <main> at /Users/freqn/projects/sandbox/todo_app/spec/factories/todos.rb:4)
+Started GET "/todos/5" for 127.0.0.1 at 2018-12-17 19:56:47 -0500
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/freqn/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by TodosController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mTodo Load (0.4ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:8
+  Rendering todos/show.html.erb within layouts/application
+  Rendered todos/show.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 323ms (Views: 295.7ms | ActiveRecord: 5.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-17 19:56:49 -0500
+Processing by TodosController#index as HTML
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "todos"."priority_level" FROM "todos"[0m
+  ↳ app/models/todo.rb:5
+  Rendering todos/index.html.erb within layouts/application
+  [1m[36mTodo Load (0.3ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+  ↳ app/views/todos/index.html.erb:20
+  Rendered todos/index.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 73ms (Views: 66.5ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/todos/1" for 127.0.0.1 at 2018-12-17 19:56:55 -0500
+Processing by TodosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTodo Load (0.6ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:8
+  Rendering todos/show.html.erb within layouts/application
+  Rendered todos/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 70ms (Views: 65.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/todos/8" for 127.0.0.1 at 2018-12-17 19:57:02 -0500
+Processing by TodosController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mTodo Load (0.8ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:8
+  Rendering todos/show.html.erb within layouts/application
+  Rendered todos/show.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 71ms (Views: 65.8ms | ActiveRecord: 0.8ms)
+
+
+Started DELETE "/todos/8" for 127.0.0.1 at 2018-12-17 19:57:18 -0500
+Processing by TodosController#destroy as HTML
+  Parameters: {"authenticity_token"=>"1JEjqBTihqZ09n3W8FuN22LcBu9uMlslot7Zrhzd4b4enOXLTfZpshp0imJHKzrctPdGTGcTvNKbb/7qDpFPqA==", "id"=>"8"}
+  [1m[36mTodo Load (0.3ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:42
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/todos_controller.rb:44
+  [1m[36mTodo Destroy (0.5ms)[0m  [1m[31mDELETE FROM "todos" WHERE "todos"."id" = $1[0m  [["id", 8]]
+  ↳ app/controllers/todos_controller.rb:44
+  [1m[35m (39.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/todos_controller.rb:44
+Redirected to http://localhost:3000/
+Completed 302 Found in 45ms (ActiveRecord: 40.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-17 19:57:18 -0500
+Processing by TodosController#index as HTML
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "todos"."priority_level" FROM "todos"[0m
+  ↳ app/models/todo.rb:5
+  Rendering todos/index.html.erb within layouts/application
+  [1m[36mTodo Load (0.3ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+  ↳ app/views/todos/index.html.erb:20
+  Rendered todos/index.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 64ms (Views: 60.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/todos/2/edit" for 127.0.0.1 at 2018-12-17 19:57:40 -0500
+Processing by TodosController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTodo Load (0.5ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:27
+  Rendering todos/edit.html.erb within layouts/application
+  Rendered todos/edit.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 55ms (Views: 51.2ms | ActiveRecord: 0.5ms)
+
+
+Started PATCH "/todos/2" for 127.0.0.1 at 2018-12-17 19:57:45 -0500
+Processing by TodosController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"aanRxq/tAeeX6IWfW9M0XgJEL7XyCAiP6uB/NdwsWkHXn9tt+Ib5O1hhUX00sGyyFNz2/tcfumA+XUrH7rXBQg==", "todo"=>{"title"=>"more styles", "description"=>"Bootstrap components", "priority_level"=>"1"}, "commit"=>"Update", "id"=>"2"}
+  [1m[36mTodo Load (0.3ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:31
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/todos_controller.rb:32
+  [1m[36mTodo Update (0.3ms)[0m  [1m[33mUPDATE "todos" SET "title" = $1, "updated_at" = $2 WHERE "todos"."id" = $3[0m  [["title", "more styles"], ["updated_at", "2018-12-18 00:57:45.021319"], ["id", 2]]
+  ↳ app/controllers/todos_controller.rb:32
+  [1m[35m (39.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/todos_controller.rb:32
+Redirected to http://localhost:3000/todos/2
+Completed 302 Found in 44ms (ActiveRecord: 40.2ms)
+
+
+Started GET "/todos/2" for 127.0.0.1 at 2018-12-17 19:57:45 -0500
+Processing by TodosController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTodo Load (0.1ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:8
+  Rendering todos/show.html.erb within layouts/application
+  Rendered todos/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 53ms (Views: 50.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-17 19:57:47 -0500
+Processing by TodosController#index as HTML
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "todos"."priority_level" FROM "todos"[0m
+  ↳ app/models/todo.rb:5
+  Rendering todos/index.html.erb within layouts/application
+  [1m[36mTodo Load (0.2ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+  ↳ app/views/todos/index.html.erb:20
+  Rendered todos/index.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 50ms (Views: 45.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/todos/1" for 127.0.0.1 at 2018-12-17 20:00:01 -0500
+Processing by TodosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTodo Load (0.3ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:8
+  Rendering todos/show.html.erb within layouts/application
+  Rendered todos/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 57ms (Views: 53.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/todos/new" for 127.0.0.1 at 2018-12-17 20:00:03 -0500
+Processing by TodosController#new as HTML
+  Rendering todos/new.html.erb within layouts/application
+  Rendered todos/new.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 57ms (Views: 53.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/todos/new" for 127.0.0.1 at 2018-12-17 20:00:06 -0500
+Processing by TodosController#new as HTML
+  Rendering todos/new.html.erb within layouts/application
+  Rendered todos/new.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 57ms (Views: 53.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-17 20:00:08 -0500
+Processing by TodosController#index as HTML
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "todos"."priority_level" FROM "todos"[0m
+  ↳ app/models/todo.rb:5
+  Rendering todos/index.html.erb within layouts/application
+  [1m[36mTodo Load (0.3ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+  ↳ app/views/todos/index.html.erb:20
+  Rendered todos/index.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 60ms (Views: 55.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/todos/1" for 127.0.0.1 at 2018-12-17 20:00:17 -0500
+Processing by TodosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTodo Load (0.6ms)[0m  [1m[34mSELECT  "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:8
+  Rendering todos/show.html.erb within layouts/application
+  Rendered todos/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 60ms (Views: 55.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-17 20:20:22 -0500
+Processing by TodosController#index as HTML
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "todos"."priority_level" FROM "todos"[0m
+  ↳ app/models/todo.rb:5
+  Rendering todos/index.html.erb within layouts/application
+  [1m[36mTodo Load (0.3ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+  ↳ app/views/todos/index.html.erb:20
+  Rendered todos/index.html.erb within layouts/application (11.7ms)
+Completed 200 OK in 73ms (Views: 59.3ms | ActiveRecord: 7.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-17 20:20:23 -0500
+Processing by TodosController#index as HTML
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "todos"."priority_level" FROM "todos"[0m
+  ↳ app/models/todo.rb:5
+  Rendering todos/index.html.erb within layouts/application
+  [1m[36mTodo Load (0.2ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+  ↳ app/views/todos/index.html.erb:20
+  Rendered todos/index.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 57ms (Views: 53.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-17 20:20:24 -0500
+Processing by TodosController#index as HTML
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "todos"."priority_level" FROM "todos"[0m
+  ↳ app/models/todo.rb:5
+  Rendering todos/index.html.erb within layouts/application
+  [1m[36mTodo Load (0.3ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+  ↳ app/views/todos/index.html.erb:20
+  Rendered todos/index.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 66ms (Views: 62.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-17 20:20:25 -0500
+Processing by TodosController#index as HTML
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "todos"."priority_level" FROM "todos"[0m
+  ↳ app/models/todo.rb:5
+  Rendering todos/index.html.erb within layouts/application
+  [1m[36mTodo Load (0.3ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+  ↳ app/views/todos/index.html.erb:20
+  Rendered todos/index.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 59ms (Views: 55.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-17 20:21:12 -0500
+Processing by TodosController#index as HTML
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/freqn/projects/sandbox/todo_app/app/models/todo.rb:6: syntax error, unexpected '}', expecting =>
+    result = {0}
+               ^):
+  
+app/models/todo.rb:6: syntax error, unexpected '}', expecting =>
+app/controllers/todos_controller.rb:3:in `index'
+Started GET "/" for 127.0.0.1 at 2018-12-17 20:21:24 -0500
+Processing by TodosController#index as HTML
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/freqn/projects/sandbox/todo_app/app/models/todo.rb:6: syntax error, unexpected '}', expecting =>
+    result = {Hash.new(0)}
+                         ^):
+  
+app/models/todo.rb:6: syntax error, unexpected '}', expecting =>
+app/controllers/todos_controller.rb:3:in `index'
+Started GET "/" for 127.0.0.1 at 2018-12-17 20:21:26 -0500
+Processing by TodosController#index as HTML
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/freqn/projects/sandbox/todo_app/app/models/todo.rb:6: syntax error, unexpected '}', expecting =>
+    result = {Hash.new(0)}
+                         ^):
+  
+app/models/todo.rb:6: syntax error, unexpected '}', expecting =>
+app/controllers/todos_controller.rb:3:in `index'
+Started GET "/" for 127.0.0.1 at 2018-12-17 20:21:33 -0500
+Processing by TodosController#index as HTML
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "todos"."priority_level" FROM "todos"[0m
+  ↳ app/models/todo.rb:5
+  Rendering todos/index.html.erb within layouts/application
+  [1m[36mTodo Load (0.3ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+  ↳ app/views/todos/index.html.erb:20
+  Rendered todos/index.html.erb within layouts/application (12.0ms)
+Completed 200 OK in 61ms (Views: 50.9ms | ActiveRecord: 4.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-17 20:24:07 -0500
+Processing by TodosController#index as HTML
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "todos"."priority_level" FROM "todos"[0m
+  ↳ app/models/todo.rb:5
+  Rendering todos/index.html.erb within layouts/application
+  [1m[36mTodo Load (0.2ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+  ↳ app/views/todos/index.html.erb:20
+  Rendered todos/index.html.erb within layouts/application (15.3ms)
+Completed 200 OK in 66ms (Views: 57.0ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-17 20:24:08 -0500
+Processing by TodosController#index as HTML
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "todos"."priority_level" FROM "todos"[0m
+  ↳ app/models/todo.rb:5
+  Rendering todos/index.html.erb within layouts/application
+  [1m[36mTodo Load (0.2ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+  ↳ app/views/todos/index.html.erb:20
+  Rendered todos/index.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 59ms (Views: 55.7ms | ActiveRecord: 0.5ms)
+
+
+DEPRECATION WARNING: Static attributes will be removed in FactoryBot 5.0. Please use dynamic
+attributes instead by wrapping the attribute value in a block:
+
+name { "test" }
+
+To automatically update from static attributes to dynamic ones,
+install rubocop-rspec and run:
+
+rubocop \
+  --require rubocop-rspec \
+  --only FactoryBot/AttributeDefinedStatically \
+  --auto-correct
+
+ (called from block (2 levels) in <main> at /Users/freqn/projects/sandbox/todo_app/spec/factories/todos.rb:3)
+DEPRECATION WARNING: Static attributes will be removed in FactoryBot 5.0. Please use dynamic
+attributes instead by wrapping the attribute value in a block:
+
+description { "factory-based description" }
+
+To automatically update from static attributes to dynamic ones,
+install rubocop-rspec and run:
+
+rubocop \
+  --require rubocop-rspec \
+  --only FactoryBot/AttributeDefinedStatically \
+  --auto-correct
+
+ (called from block (2 levels) in <main> at /Users/freqn/projects/sandbox/todo_app/spec/factories/todos.rb:4)
+Started GET "/" for 127.0.0.1 at 2018-12-17 20:27:04 -0500
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/freqn/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by TodosController#index as HTML
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "todos"."priority_level" FROM "todos"[0m
+  ↳ app/models/todo.rb:5
+  Rendering todos/index.html.erb within layouts/application
+  [1m[36mTodo Load (0.3ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+  ↳ app/views/todos/index.html.erb:20
+  Rendered todos/index.html.erb within layouts/application (14.9ms)
+Completed 200 OK in 293ms (Views: 274.8ms | ActiveRecord: 5.3ms)
+
+
+DEPRECATION WARNING: Static attributes will be removed in FactoryBot 5.0. Please use dynamic
+attributes instead by wrapping the attribute value in a block:
+
+name { "test" }
+
+To automatically update from static attributes to dynamic ones,
+install rubocop-rspec and run:
+
+rubocop \
+  --require rubocop-rspec \
+  --only FactoryBot/AttributeDefinedStatically \
+  --auto-correct
+
+ (called from block (2 levels) in <main> at /Users/freqn/projects/sandbox/todo_app/spec/factories/todos.rb:3)
+DEPRECATION WARNING: Static attributes will be removed in FactoryBot 5.0. Please use dynamic
+attributes instead by wrapping the attribute value in a block:
+
+description { "factory-based description" }
+
+To automatically update from static attributes to dynamic ones,
+install rubocop-rspec and run:
+
+rubocop \
+  --require rubocop-rspec \
+  --only FactoryBot/AttributeDefinedStatically \
+  --auto-correct
+
+ (called from block (2 levels) in <main> at /Users/freqn/projects/sandbox/todo_app/spec/factories/todos.rb:4)
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (206.8ms)[0m  [1m[35mDROP DATABASE IF EXISTS "todo_app_development"[0m
+  ↳ bin/rails:9
+  [1m[35m (246.9ms)[0m  [1m[35mDROP DATABASE IF EXISTS "todo_app_test"[0m
+  ↳ bin/rails:9
+DEPRECATION WARNING: Static attributes will be removed in FactoryBot 5.0. Please use dynamic
+attributes instead by wrapping the attribute value in a block:
+
+name { "test" }
+
+To automatically update from static attributes to dynamic ones,
+install rubocop-rspec and run:
+
+rubocop \
+  --require rubocop-rspec \
+  --only FactoryBot/AttributeDefinedStatically \
+  --auto-correct
+
+ (called from block (2 levels) in <main> at /Users/freqn/projects/sandbox/todo_app/spec/factories/todos.rb:3)
+DEPRECATION WARNING: Static attributes will be removed in FactoryBot 5.0. Please use dynamic
+attributes instead by wrapping the attribute value in a block:
+
+description { "factory-based description" }
+
+To automatically update from static attributes to dynamic ones,
+install rubocop-rspec and run:
+
+rubocop \
+  --require rubocop-rspec \
+  --only FactoryBot/AttributeDefinedStatically \
+  --auto-correct
+
+ (called from block (2 levels) in <main> at /Users/freqn/projects/sandbox/todo_app/spec/factories/todos.rb:4)
+  [1m[35m (460.2ms)[0m  [1m[35mCREATE DATABASE "todo_app_development" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (401.4ms)[0m  [1m[35mCREATE DATABASE "todo_app_test" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+DEPRECATION WARNING: Static attributes will be removed in FactoryBot 5.0. Please use dynamic
+attributes instead by wrapping the attribute value in a block:
+
+name { "test" }
+
+To automatically update from static attributes to dynamic ones,
+install rubocop-rspec and run:
+
+rubocop \
+  --require rubocop-rspec \
+  --only FactoryBot/AttributeDefinedStatically \
+  --auto-correct
+
+ (called from block (2 levels) in <main> at /Users/freqn/projects/sandbox/todo_app/spec/factories/todos.rb:3)
+DEPRECATION WARNING: Static attributes will be removed in FactoryBot 5.0. Please use dynamic
+attributes instead by wrapping the attribute value in a block:
+
+description { "factory-based description" }
+
+To automatically update from static attributes to dynamic ones,
+install rubocop-rspec and run:
+
+rubocop \
+  --require rubocop-rspec \
+  --only FactoryBot/AttributeDefinedStatically \
+  --auto-correct
+
+ (called from block (2 levels) in <main> at /Users/freqn/projects/sandbox/todo_app/spec/factories/todos.rb:4)
+  [1m[35m (4.6ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ bin/rails:9
+  [1m[35m (2.0ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(8535192876944776140)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateTodos (20181214131036)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (3.1ms)[0m  [1m[35mCREATE TABLE "todos" ("id" bigserial primary key, "name" character varying, "description" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20181214131036_create_todos.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20181214131036"]]
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to ChangeColumnName (20181214133346)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "todos" RENAME COLUMN "name" TO "title"[0m
+  ↳ db/migrate/20181214133346_change_column_name.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20181214133346"]]
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to AddPriorityToTodos (20181217151404)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "todos" ADD "priority_level" integer[0m
+  ↳ db/migrate/20181217151404_add_priority_to_todos.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20181217151404"]]
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Create (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2018-12-18 01:27:17.895064"], ["updated_at", "2018-12-18 01:27:17.895064"]]
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(8535192876944776140)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+DEPRECATION WARNING: Static attributes will be removed in FactoryBot 5.0. Please use dynamic
+attributes instead by wrapping the attribute value in a block:
+
+name { "test" }
+
+To automatically update from static attributes to dynamic ones,
+install rubocop-rspec and run:
+
+rubocop \
+  --require rubocop-rspec \
+  --only FactoryBot/AttributeDefinedStatically \
+  --auto-correct
+
+ (called from block (2 levels) in <main> at /Users/freqn/projects/sandbox/todo_app/spec/factories/todos.rb:3)
+DEPRECATION WARNING: Static attributes will be removed in FactoryBot 5.0. Please use dynamic
+attributes instead by wrapping the attribute value in a block:
+
+description { "factory-based description" }
+
+To automatically update from static attributes to dynamic ones,
+install rubocop-rspec and run:
+
+rubocop \
+  --require rubocop-rspec \
+  --only FactoryBot/AttributeDefinedStatically \
+  --auto-correct
+
+ (called from block (2 levels) in <main> at /Users/freqn/projects/sandbox/todo_app/spec/factories/todos.rb:4)
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:7
+  [1m[36mTodo Create (0.9ms)[0m  [1m[32mINSERT INTO "todos" ("title", "description", "created_at", "updated_at", "priority_level") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "status handling"], ["description", "to mark as 'done' instead of destroying"], ["created_at", "2018-12-18 01:27:19.425917"], ["updated_at", "2018-12-18 01:27:19.425917"], ["priority_level", 3]]
+  ↳ db/seeds.rb:7
+  [1m[35m (40.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:7
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:7
+  [1m[36mTodo Create (0.4ms)[0m  [1m[32mINSERT INTO "todos" ("title", "description", "created_at", "updated_at", "priority_level") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "More styles"], ["description", "Bootstrap components"], ["created_at", "2018-12-18 01:27:19.470114"], ["updated_at", "2018-12-18 01:27:19.470114"], ["priority_level", 6]]
+  ↳ db/seeds.rb:7
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:7
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:7
+  [1m[36mTodo Create (0.3ms)[0m  [1m[32mINSERT INTO "todos" ("title", "description", "created_at", "updated_at", "priority_level") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "user registration"], ["description", "Compare Devise vs alternatives"], ["created_at", "2018-12-18 01:27:19.475360"], ["updated_at", "2018-12-18 01:27:19.475360"], ["priority_level", 3]]
+  ↳ db/seeds.rb:7
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:7
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:7
+  [1m[36mTodo Create (0.3ms)[0m  [1m[32mINSERT INTO "todos" ("title", "description", "created_at", "updated_at", "priority_level") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "user settings/profiles"], ["description", "Users should be able to edit their own profiles"], ["created_at", "2018-12-18 01:27:19.478974"], ["updated_at", "2018-12-18 01:27:19.478974"], ["priority_level", 4]]
+  ↳ db/seeds.rb:7
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:7
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:7
+  [1m[36mTodo Create (0.3ms)[0m  [1m[32mINSERT INTO "todos" ("title", "description", "created_at", "updated_at", "priority_level") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "user level privileges"], ["description", "Admins should be able to manage users and their todos"], ["created_at", "2018-12-18 01:27:19.481527"], ["updated_at", "2018-12-18 01:27:19.481527"], ["priority_level", 6]]
+  ↳ db/seeds.rb:7
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:7
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:7
+  [1m[36mTodo Create (0.2ms)[0m  [1m[32mINSERT INTO "todos" ("title", "description", "created_at", "updated_at", "priority_level") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "metrics"], ["description", "Users should have metrics"], ["created_at", "2018-12-18 01:27:19.484968"], ["updated_at", "2018-12-18 01:27:19.484968"], ["priority_level", 6]]
+  ↳ db/seeds.rb:7
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:7
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:7
+  [1m[36mTodo Create (0.3ms)[0m  [1m[32mINSERT INTO "todos" ("title", "description", "created_at", "updated_at", "priority_level") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "admin/super admin"], ["description", "task and user mgt"], ["created_at", "2018-12-18 01:27:19.487691"], ["updated_at", "2018-12-18 01:27:19.487691"], ["priority_level", 3]]
+  ↳ db/seeds.rb:7
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:7
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:7
+  [1m[36mTodo Create (0.3ms)[0m  [1m[32mINSERT INTO "todos" ("title", "description", "created_at", "updated_at", "priority_level") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "alerts"], ["description", "action cable?"], ["created_at", "2018-12-18 01:27:19.491440"], ["updated_at", "2018-12-18 01:27:19.491440"], ["priority_level", 8]]
+  ↳ db/seeds.rb:7
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:7
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:7
+  [1m[36mTodo Create (0.3ms)[0m  [1m[32mINSERT INTO "todos" ("title", "description", "created_at", "updated_at", "priority_level") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "slack integration"], ["description", "API feed"], ["created_at", "2018-12-18 01:27:19.494600"], ["updated_at", "2018-12-18 01:27:19.494600"], ["priority_level", 7]]
+  ↳ db/seeds.rb:7
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:7
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:7
+  [1m[36mTodo Create (0.3ms)[0m  [1m[32mINSERT INTO "todos" ("title", "description", "created_at", "updated_at", "priority_level") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "ajax"], ["description", "more realtime goodness"], ["created_at", "2018-12-18 01:27:19.498306"], ["updated_at", "2018-12-18 01:27:19.498306"], ["priority_level", 7]]
+  ↳ db/seeds.rb:7
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:7
+DEPRECATION WARNING: Static attributes will be removed in FactoryBot 5.0. Please use dynamic
+attributes instead by wrapping the attribute value in a block:
+
+name { "test" }
+
+To automatically update from static attributes to dynamic ones,
+install rubocop-rspec and run:
+
+rubocop \
+  --require rubocop-rspec \
+  --only FactoryBot/AttributeDefinedStatically \
+  --auto-correct
+
+ (called from block (2 levels) in <main> at /Users/freqn/projects/sandbox/todo_app/spec/factories/todos.rb:3)
+DEPRECATION WARNING: Static attributes will be removed in FactoryBot 5.0. Please use dynamic
+attributes instead by wrapping the attribute value in a block:
+
+description { "factory-based description" }
+
+To automatically update from static attributes to dynamic ones,
+install rubocop-rspec and run:
+
+rubocop \
+  --require rubocop-rspec \
+  --only FactoryBot/AttributeDefinedStatically \
+  --auto-correct
+
+ (called from block (2 levels) in <main> at /Users/freqn/projects/sandbox/todo_app/spec/factories/todos.rb:4)
+Started GET "/" for 127.0.0.1 at 2018-12-17 20:27:27 -0500
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/freqn/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by TodosController#index as HTML
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "todos"."priority_level" FROM "todos"[0m
+  ↳ app/models/todo.rb:5
+  Rendering todos/index.html.erb within layouts/application
+  [1m[36mTodo Load (0.4ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+  ↳ app/views/todos/index.html.erb:20
+  Rendered todos/index.html.erb within layouts/application (18.2ms)
+Completed 200 OK in 302ms (Views: 286.1ms | ActiveRecord: 4.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-17 20:30:07 -0500
+Processing by TodosController#index as HTML
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "todos"."priority_level" FROM "todos"[0m
+  ↳ app/models/todo.rb:5
+  Rendering todos/index.html.erb within layouts/application
+  [1m[36mTodo Load (0.2ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+  ↳ app/views/todos/index.html.erb:20
+  Rendered todos/index.html.erb within layouts/application (12.3ms)
+Completed 200 OK in 62ms (Views: 54.0ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-17 20:32:20 -0500
+Processing by TodosController#index as HTML
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "todos"."priority_level" FROM "todos"[0m
+  ↳ app/models/todo.rb:5
+  Rendering todos/index.html.erb within layouts/application
+  [1m[36mTodo Load (0.3ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+  ↳ app/views/todos/index.html.erb:20
+  Rendered todos/index.html.erb within layouts/application (17.3ms)
+Completed 200 OK in 88ms (Views: 76.4ms | ActiveRecord: 4.3ms)
+
+

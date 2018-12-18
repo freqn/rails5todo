@@ -1,7 +1,7 @@
 class TodosController < ApplicationController
   def index 
     @todos = Todo.all
-    @recurring_levels = Todo.priority_counts
+    @priorities = Todo.prioritize
   end
 
   def show
