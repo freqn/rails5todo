@@ -1,11 +1,11 @@
 class TodosController < ApplicationController
   def index 
-    @todos = Todo.all
-    @priorities = Todo.prioritize
+    @todos ||= Todo.all.order(priority_level: :desc)
+    @priorities = @todos.high_sev.group(:priority_level).count
   end
 
   def show
-    @todo = Todo.find(params[:id])
+    @todo ||= Todo.find(params[:id])
   end
 
   def new 
